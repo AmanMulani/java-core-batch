@@ -1,0 +1,41 @@
+Loops: Repetitive Work
+
+Types:
+    1. for loop
+    2. while loop
+    3. do-while loop
+
+
+1. For Loop
+
+    for(initialization; condition; update_expression) {
+        //body of the loop.
+    }
+
+    It is an entry-controlled loop;
+
+    For example:
+    for(int i = 3; i<2; i++) {
+        System.out.println("I am inside loop");
+    }
+
+    This won't print anything because 3 is not less than 2, and therefore the condition evaluated
+    to be false.
+    This is why for loops are called entry controlled loops because condition is checked first.
+
+
+2. while loop
+
+    Syntax:
+    while(expression) {
+        //body of the loop
+    }
+
+    For example:
+    int i = 1;
+    while(i<=5) {
+        System.out.println(i);
+        i++;
+    }
+
+    While loop is also an entry controlled loop.
