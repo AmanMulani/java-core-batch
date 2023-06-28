@@ -39,3 +39,12 @@ Types:
     }
 
     While loop is also an entry controlled loop.
+
+
+3. do-while
+
+    do {
+        //body of the loop.
+    } while(expression)
+
+    Exit controlled loop.
