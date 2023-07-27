@@ -1,0 +1,69 @@
+What is inheritance?
+It is a concept by which the child class inherits or gets some pre-defined behavior and characteristics
+from the parent class.
+
+Example:
+
+Create objects of different types of animals. (minimum 5)
+
+1. Dog 
+    class Dog {
+        int legs = 4;
+        int eyes = 2;
+
+        public void breathe() {
+            System.out.println("I breathe");
+        }
+    }
+
+2. Cat
+    class Cat {
+        int legs = 4;
+        int eyes = 2;
+
+        public void breathe() {
+            System.out.println("I breathe");
+        }
+    }
+
+
+3. Elephant 
+    class Elephant {
+        int legs = 4;
+        int eyes = 2;
+
+        public void breathe() {
+            System.out.println("I breathe");
+        }
+    }
+
+
+4. Horse
+    class Horse {
+        int legs = 4;
+        int eyes = 2;
+
+        public void breathe() {
+            System.out.println("I breathe");
+        }
+    }
+
+Imagine that there is an Animal class. This class has some properties and behavior which is common to all
+animals such as dogs, cats, elephants, lions, tigers, etc.
+
+//Super class / Parent Class
+class Animal {
+    int legs = 4;
+    int eyes = 2;
+
+    public void breathe() {
+        System.out.println("I breathe");
+    }
+}
+
+How to extend classes (Inheritance):
+
+//This is the child class / derived class
+class Dog extends Animal {
+
+}
