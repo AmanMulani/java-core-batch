@@ -1,0 +1,24 @@
+List (Abstract DataType)
+A list is a collection of elements whose size is dynamic, unlike array. Therefore more flexible that arrays.
+
+List<DataType> list = new ArrayList<>();
+
+Add: list.add(elem) //Adds to the end of the list.
+Update: list.add(index, elem); //Adds to the required index.
+Delete: list.remove(index); //Deletes the element at the given index.
+Read: list.get(index); //Gets the element at the given index.
+
+You cannot use primitive data types(int, float, double, boolean, char) with collections.
+Instead use: Integer, Boolean, Double, Float, Character.
+
+MAP
+What is a Map?
+It is a simple key-value pair.
+Example: Consider a dictionary. A dictionary has words, and each word has some meaning.
+So we can think of the word as a key and meaning as value.
+
+{
+    key: value.
+}
+
+
