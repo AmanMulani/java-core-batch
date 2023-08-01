@@ -22,3 +22,13 @@ So we can think of the word as a key and meaning as value.
 }
 
 
+SET
+Set is an unordered collection of data.
+
+Set<DataType> variableName = new HashSet<>();
+
+Ex: Set<String> names = new Set<>();
+
+{"Aman", "Mulani", "John", "Jacobs"}
+
+
