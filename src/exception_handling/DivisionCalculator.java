@@ -24,9 +24,15 @@ public class DivisionCalculator {
 
             try {
                 System.out.println("The answer is: " + divide(a, b));
-            } catch (Exception e) {
-                System.out.println("Error in dividing the numbers");
+                userInput();
+            } catch (IOException e) {
                 System.out.println("The error is: " + e.toString());
+            } catch (ArithmeticException e) {
+                System.out.println("Error in dividing the numbers");
+            } catch (Exception e) {
+                System.out.println("Unknown exception occurred");
+            } finally {
+
             }
 
             System.out.println("===================================");
@@ -34,8 +40,22 @@ public class DivisionCalculator {
 
     }
 
-    public static int divide(int a, int b) throws Exception {
-        return a/b;
+    public static void userInput() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Enter your name");
+        String name = br.readLine();
+        System.out.println("The name is: " + name);
+    }
+
+    public static int divide(int a, int b) throws ArithmeticException {
+        try {
+            return a/b;
+        } catch (Exception e) {
+            throw new ArithmeticException();
+        } finally {
+            System.out.println("This will execute no matter what");
+        }
     }
     
 }
