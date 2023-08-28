@@ -1,50 +1,51 @@
 package src.lruCache;
 
-public class SimpleArrayCache {
+//k = Integer, v= String
+public class SimpleArrayCache<K,V> {
     
     public final Integer size;
-    final KeyValuePair[] cache;
+    final KeyValuePair<K, V>[] cache;
     private int count;
 
-    SimpleArrayCache(int size) {
+    public SimpleArrayCache(int size) {
         this.size = size;
         cache = new KeyValuePair[size];
         this.count = 0;
     }
 
 
-    public String get(String key) {
+    public V get(K key) {
         for(int i = 0; i<count; i++) {
             if(cache[i].key.equals(key)) {
-                return cache[i].value;
+                return (V) cache[i].value;
             }
         }
         return null;
     }
 
 
-    public void put(String key, String value) {
+    public void put(K key, V value) {
         if(count == size) {
             //Left shift operation
             for(int i = 1; i<size-1; i++) {
                 cache[i-1] = cache[i];
             }
-            cache[size-1] = new KeyValuePair(key, value);
+            cache[size-1] = new KeyValuePair<K, V>(key, value);
         } else {
-            cache[count] = new KeyValuePair(key, value);
+            cache[count] = new KeyValuePair<K, V>(key, value);
+            count++;
         }
     }
 
     
 }
 
-class KeyValuePair {
-    public String key;
-    public String value;
+class KeyValuePair<K, V> {
+    public K key;
+    public V value;
 
-    public KeyValuePair(String k, String v) {
+    public KeyValuePair(K k, V v) {
         this.key = k;
         this.value = v;
     }
-
 }
